@@ -10,6 +10,9 @@ ovs-vsctl set port {EXT_PORT_BRIDGE} vlan_mode=dot1q-tunnel tag={CUSTOMER_DOT1Q_
 ovs-ofctl add-flow br-int in_port={VM_PORT_BRIDGE},dl_vlan={VM2BRIDGE_TRANSIT_VLAN},actions=mod_vlan_vid:{VXLAN_TRANSIT_VLAN},output:{EXT_PORT_BRIDGE}
 ovs-ofctl add-flow br-int in_port={EXT_PORT_BRIDGE},dl_vlan={VXLAN_TRANSIT_VLAN},actions=mod_vlan_vid:{VM2BRIDGE_TRANSIT_VLAN},output:{VM_PORT_BRIDGE}
 
+#### Mellanox (ovs-test) on GitHub (eg. https://github.com/Mellanox/ovs-tests/blob/master/test-ovs-qinq-and-vlan.sh)
+ovs-vsctl add-port br-ovs $REP tag=$out_vlan vlan-mode=dot1q-tunnel other-config:qinq-ethtype=802.1q
+
 ### dot1q docs: https://developers.redhat.com/blog/2017/06/06/open-vswitch-overview-of-802-1ad-qinq-support
 
 ### Tests
