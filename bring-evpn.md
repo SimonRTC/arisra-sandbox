@@ -64,7 +64,8 @@ vlan 300
 ```
 
 sources:
-- VXLAN - MAC address learning/propagation through EVPN/FRsR ([mail.openvswitch.org](https://mail.openvswitch.org/))
+- [ovs-discuss] VXLAN - MAC address learning/propagation through EVPN/FRsR ([mail.openvswitch.org](https://mail.openvswitch.org/))
+- [ovs-discuss] BGP EVPN support ([mail.openvswitch.org](https://mail.openvswitch.org/))
 - VXLAN: BGP EVPN with FRR [vincent.bernat.ch](https://vincent.bernat.ch/en/blog/2017-vxlan-bgp-evpn)
 
 ## Open vSwitch
