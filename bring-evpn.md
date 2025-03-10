@@ -12,6 +12,13 @@ The purpose of this topology is to support 4064 vlans per overlays (VNI). We are
 
 This configuration assumes you already have a functional local environment with your existing service flooding traffic on a bridge named "br-int". Each virtual network (/or/ overlay) is flooded on a dedicated "local" 802.1q vlan on this bridge (like the OpenStack OvS driver for example).
 
+
+Sources:
+
+- [ovs-discuss] VXLAN - MAC address learning/propagation through EVPN/FRsR ([mail.openvswitch.org](https://mail.openvswitch.org/))
+- [ovs-discuss] BGP EVPN support ([mail.openvswitch.org](https://mail.openvswitch.org/))
+- VXLAN: BGP EVPN with FRR [vincent.bernat.ch](https://vincent.bernat.ch/en/blog/2017-vxlan-bgp-evpn)
+
 ## FRRouting
 
 ### Local EVPN configurations
@@ -62,11 +69,6 @@ vlan 300
  route-target export 65000:300
 !
 ```
-
-sources:
-- [ovs-discuss] VXLAN - MAC address learning/propagation through EVPN/FRsR ([mail.openvswitch.org](https://mail.openvswitch.org/))
-- [ovs-discuss] BGP EVPN support ([mail.openvswitch.org](https://mail.openvswitch.org/))
-- VXLAN: BGP EVPN with FRR [vincent.bernat.ch](https://vincent.bernat.ch/en/blog/2017-vxlan-bgp-evpn)
 
 ## Open vSwitch
 
